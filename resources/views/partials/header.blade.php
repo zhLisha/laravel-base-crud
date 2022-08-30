@@ -1,14 +1,14 @@
 <header>
     <nav class="container">
         <ul class="flex ">
-            <li>
+            <li class="{{ Route::current()->getName() === 'home' ? 'current' : ''}}">
                 <a href="{{route('home')}}">Home</a>
             </li>
-            <li>
+            <li class="{{ Route::current()->getName() === 'comics.index' ? 'current' : ''}}">
                 <a href="{{route('comics.index')}}">Comics</a>
             </li>
-            <li>
-                <a href="#">Crea il tuo personaggio</a>
+            <li class="{{ Route::current()->getName() === 'comics.create' ? 'current' : ''}}">
+                <a href="{{route('comics.create')}}">Crea il tuo fumetto</a>
             </li>
         </ul>
     </nav>

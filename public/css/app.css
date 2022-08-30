@@ -21,6 +21,10 @@ header .container ul li a:hover {
   color: pink;
 }
 
+header .container .current {
+  color: rgb(208, 80, 101);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -95,5 +99,51 @@ a {
 .card-details .series,
 .card-details .sale-date {
   padding: 10px 0;
+}
+
+.create-comics-form h2 {
+  padding: 20px 0;
+}
+
+.create-comics-form label {
+  padding: 10px 0;
+  display: inline-block;
+  width: 150px;
+}
+
+.create-comics-form input {
+  width: 300px;
+  border: transparent;
+  border-bottom: 2px solid rgb(224, 220, 221);
+}
+
+.create-comics-form input:focus {
+  outline: none;
+}
+
+.create-comics-form button {
+  background-color: pink;
+  margin: 20px 0;
+  padding: 6px 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.create-comics-form button:hover {
+  color: white;
+  transition: 0.5s;
+  background-color: lightblue;
+}
+
+.create-comics-form textarea {
+  width: 300px;
+  border: transparent;
+  border-bottom: 2px solid rgb(224, 220, 221);
+}
+
+.create-comics-form textarea:focus {
+  outline: none;
 }
 
