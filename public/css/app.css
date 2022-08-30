@@ -76,6 +76,10 @@ a {
      object-position: top;
 }
 
+.card-details img {
+  width: 192px;
+}
+
 .card-details h2 {
   text-transform: uppercase;
   padding: 20px 0;

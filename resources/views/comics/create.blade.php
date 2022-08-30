@@ -8,7 +8,7 @@
     <section class="create-comics-form container">
         <h2>Crea il tuo fumetto</h2>
 
-        <form action="">
+        <form action="{{ route('comics.store') }}" method="post">
             @csrf
 
             {{-- Title --}}
@@ -27,6 +27,12 @@
             <div>
                 <label for="type">Tipologia</label>
                 <input type="text" id="type" name="type">
+            </div>
+
+            {{-- Price --}}
+            <div>
+                <label for="price">Prezzo</label>
+                <input type="text" id="price" name="price">
             </div>
 
              {{-- Description --}}
