@@ -1,0 +1,28 @@
+.card-details {
+    h2 {
+        text-transform: uppercase;
+        padding: 20px 0;
+    }
+
+    p {
+        width: 60%;
+        padding: 0 30px;
+    }
+
+    .detail-mini-title {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    .sale-date {
+        .detail-mini-title {
+            color: red;
+        }
+    }
+
+    .price, 
+    .series,
+    .sale-date {
+        padding: 10px 0;
+    }
+}
