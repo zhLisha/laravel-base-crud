@@ -1,0 +1,19 @@
+.cards {
+    padding: 50px 0;
+    ul {
+        flex-wrap: wrap;
+
+        li {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: calc((100% / 5) - 10px);
+
+            img {
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+    }
+}

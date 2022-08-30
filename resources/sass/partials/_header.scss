@@ -1,0 +1,21 @@
+header {
+    background-color: lightblue;
+    .container {
+        height: 70px;
+
+        ul {
+            height: 100%;
+            font-size: 20px;
+            align-items: center;
+    
+            li {
+                padding-right: 30px;
+
+                a:hover {
+                    transition: 0.3s;
+                    color: pink;
+                }
+            }
+        }
+    }
+}
