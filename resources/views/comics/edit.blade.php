@@ -17,37 +17,37 @@
                     {{-- Title --}}
                     <div>
                         <label for="title">Titolo</label>
-                        <input type="text" id="title" name="title" value="{{ $comic->title }}">
+                        <input type="text" id="title" name="title" value="{{ old('title') ? old('title') : $comic->title }}">
                     </div>
         
                     {{-- THumb --}}
                     <div>
                         <label for="thumb">Copertina</label>
-                        <input type="text" id="thumb" name="thumb" value="{{ $comic->thumb }}">
+                        <input type="text" id="thumb" name="thumb" value="{{ old('thumb') ? old('thumb') : $comic->thumb }}">
                     </div>
                     
                     {{-- Type --}}
                     <div>
                         <label for="type">Tipologia</label>
-                        <input type="text" id="type" name="type" value="{{ $comic->type }}">
+                        <input type="text" id="type" name="type" value="{{ old('type') ? old('type') : $comic->type }}">
                     </div>
         
                     {{-- Price --}}
                     <div>
                         <label for="price">Prezzo</label>
-                        <input type="text" id="price" name="price" value="{{ $comic->price }}">
+                        <input type="text" id="price" name="price" value="{{ old('price') ? old('price') : $comic->price }}">
                     </div>
 
                     {{-- Series --}}
                     <div>
                         <label for="series">Serie</label>
-                        <input type="text" id="series" name="series" value="{{ $comic->series }}">
+                        <input type="text" id="series" name="series" value="{{ old('series') ? old('series') : $comic->series }}">
                     </div>
                     
                     {{-- Sale_date --}}
                     <div>
                         <label for="sale_date">Data Saldi</label>
-                        <input type="date" id="sale_date" name="sale_date" value="{{ $comic->sale_date }}">
+                        <input type="date" id="sale_date" name="sale_date" value="{{ old('sale_date') ? old('sale_date') : $comic->sale_date }}">
                     </div>
         
                      {{-- Description --}}

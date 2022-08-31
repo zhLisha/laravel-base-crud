@@ -41,22 +41,22 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $comics = Comic::all();
+        $request->validate($this->getValidationRules());
 
         $form_data = $request->all();
 
         $new_comic = new Comic();
-        $new_comic->title = $form_data['title'];
-        $new_comic->thumb = $form_data['thumb'];
-        $new_comic->type = $form_data['type'];
-        $new_comic->price = $form_data['price'];
-        $new_comic->series = $form_data['series'];
-        $new_comic->sale_date = $form_data['sale_date'];
-        $new_comic->description = $form_data['description'];
-
+        // $new_comic->title = $form_data['title'];
+        // $new_comic->thumb = $form_data['thumb'];
+        // $new_comic->type = $form_data['type'];
+        // $new_comic->price = $form_data['price'];
+        // $new_comic->series = $form_data['series'];
+        // $new_comic->sale_date = $form_data['sale_date'];
+        // $new_comic->description = $form_data['description'];
+        $new_comic->fill($form_data);
         $new_comic->save();
-
-        return redirect()->route('comics.show', ['comic' => $new_comic->id]);
+  
+        // return redirect()->route('comics.show', ['comic' => $new_comic->id]);
     }
 
     /**
@@ -103,12 +103,14 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate($this->getValidationRules());
+
         $form_data = $request->all();
 
         $comic_to_update = Comic::findOrFail($id);
         $comic_to_update->update($form_data);
 
-        return redirect()->route('comics.index');
+        // return redirect()->route('comics.show', ['comic' => $comic_to_update->id]);
     }
 
     /**
@@ -120,5 +122,17 @@ class ComicController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    protected function getValidationRules() {
+        return [
+            'title' => 'required|max:100',
+            'description' => 'max:50000',
+            'thumb' => 'max:60000',
+            'price' => 'required | numeric',
+            'series' => 'max:50',
+            'sale_date' => 'date',
+            'type' => 'max:30'
+        ];
     }
 }

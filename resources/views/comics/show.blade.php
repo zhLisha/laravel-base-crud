@@ -40,13 +40,18 @@
                 <span class="detail-mini-title">Tipologia: </span>
                 <span> {{ $comics->type }} </span>
             </div>
-        @endif
+            @endif
             @if ($comics->sale_date)
                 <div class="sale-date">
                     <span class="detail-mini-title">Data Saldi: </span>
                     <span> {{ date('d-m-Y', strtotime($comics->sale_date)) }}</span>
                 </div>
             @endif
+
+            {{-- Edit product --}}
+            <div class="edit-product">
+                <a href="{{route('comics.edit', ['comic' => $comics->id])}}">Modifica </a>
+            </div>
         </div>
     </section>
     
