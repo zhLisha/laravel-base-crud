@@ -35,10 +35,22 @@
                 <input type="text" id="price" name="price">
             </div>
 
+             {{-- Series --}}
+             <div>
+                <label for="series">Serie</label>
+                <input type="text" id="series" name="series">
+            </div>
+            
+            {{-- Sale_date --}}
+            <div>
+                <label for="sale_date">Data Saldi</label>
+                <input type="date" id="sale_date" name="sale_date">
+            </div>
+
              {{-- Description --}}
              <div>
                 <label for="description">Descrizione</label>
-                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                <textarea name="description" id="description" cols="30" rows="15"></textarea>
             </div>
 
             <button>
