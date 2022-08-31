@@ -15,10 +15,19 @@
                         <a href="{{ route('comics.show', ['comic' => $comic->id]) }}">
                             <img src="{{$comic->thumb}}" alt="{{$comic->title}}">
                         </a>
-                    {{-- Edit product --}}
-                    <div class="edit-product">
-                        <a href="{{route('comics.edit', ['comic' => $comic->id])}}">Modifica </a>
-                    </div>
+                        {{-- Edit product --}}
+                        <div class="edit-product">
+                            <a href="{{route('comics.edit', ['comic' => $comic->id])}}">Modifica </a>
+                        </div>
+
+                        {{-- Delete --}}
+                        <div>
+                            <form action="{{ route('comics.destroy', ['comic' => $comic->id])}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" value="Cancella">
+                            </form>
+                        </div>
                     </li>
                 @endforeach
             </ul>

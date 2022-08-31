@@ -6,5 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comic extends Model
 {
-    // protected $guarded = [];  
+    protected $fillable = [
+        'title',
+        'thumb',
+        'price',
+        'series',
+        'sale_date',
+        'type',
+        'description'
+    ];
+
+    protected $table = 'comics'; 
 }
