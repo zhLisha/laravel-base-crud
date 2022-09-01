@@ -60,7 +60,7 @@
             
             {{-- Sale_date --}}
             <div>
-                <label for="sale_date">Data Saldi</label>
+                <label for="sale_date">Data Uscita</label>
                 <input type="date" id="sale_date" name="sale_date" value="{{ old('sale_date') }}">
             </div>
 

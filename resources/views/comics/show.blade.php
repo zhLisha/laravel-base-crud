@@ -43,7 +43,7 @@
             @endif
             @if ($comics->sale_date)
                 <div class="sale-date">
-                    <span class="detail-mini-title">Data Saldi: </span>
+                    <span class="detail-mini-title">Data uscita: </span>
                     <span> {{ date('d-m-Y', strtotime($comics->sale_date)) }}</span>
                 </div>
             @endif
